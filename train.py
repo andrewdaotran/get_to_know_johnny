@@ -82,6 +82,9 @@ for epoch in range(num_epochs):
     for(words, labels) in train_loader:
         words = words.to(device)
         labels = labels.to(device)
+        
+        # put model into training mode
+        model.train()
 
         # forward pass
         outputs = model(words)
