@@ -1,13 +1,10 @@
 from flask import Flask, render_template, request, jsonify
+from flask_cors import CORS
 
 from chatAPI import get_response
 
 app = Flask(__name__)
-
-
-@app.get("/")
-def index_get():
-    return render_template("base.html")
+CORS(app)
 
 
 @app.post("/predict")
