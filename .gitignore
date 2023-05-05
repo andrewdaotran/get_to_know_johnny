@@ -3,3 +3,6 @@ __pycache__/
 venv/
 
 data.pth
+.vercel
+
+vercel.json
